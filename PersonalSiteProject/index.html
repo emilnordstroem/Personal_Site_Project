@@ -5,36 +5,55 @@
         <meta charset="utf-8">
         <title>Resume Site</title>
         <link rel="stylesheet" href="css/index.css">
-    </head>
+        <!-- please visit: https://fonts.google.com/icons -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <body>
-       <header>
-            <span id="profile_header">
-                <img id="profile_photo" src="images/Profile_Photo.jpeg" alt="selfie of Emil Nordstroem">
-                <h1 id="header_name">
-                    <a href="https://www.linkedin.com/in/emil-st%C3%B8ve-900423234/" target="_blank">
+       
+        <header>
+            
+            <div class="header-profile-container">
+                <div class="grid-profile-photo-text-item">
+                    <img id="profile_photo" src="images/Profile_Photo.jpeg" alt="selfie of Emil Nordstroem">
+                    <h1 id="header_name">
                         Emil Nordstroem
-                    </a>
-                </h1>
-            </span>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <a id="interactions_bar_item" href="index.html">
+                    </h1>   
+                </div>
+            </div>
+
+            <div class="header-interaction-container">
+                <div class="grid-home-item">
+                    <a id="link-home-item" href="index.html">
+                        <span class="material-symbols-outlined">home</span>
                         Home
                     </a>
                 </div>
-                <div class="grid-item">
-                    <a id="interactions_bar_item" href="https://www.linkedin.com/in/emil-st%C3%B8ve-900423234/" target="_blank"> 
-                        <i></i>
+                <div class="grid-projects-item">
+                    <a id="link-projects-item">
+                        <span class="material-symbols-outlined">view_timeline</span>
+                        Projects
+                    </a>
+                </div>
+                <div class="grid-certificates-item">
+                    <a id="link-certificate-item" href="https://www.linkedin.com/in/emil-st%C3%B8ve-900423234/details/certifications/" target="_blank">
+                        <span class="material-symbols-outlined">license</span>
+                        Certificates
+                    </a>
+                </div>
+                <div class="grid-linkedin-item">
+                    <a id="link-linkedin-item" href="https://www.linkedin.com/in/emil-st%C3%B8ve-900423234/" target="_blank"> 
+                        <span class="material-symbols-outlined">work</span>
                         LinkedIn
                     </a>
                 </div>
-                <div class="grid-item">
-                    <a id="interactions_bar_item" href="https://github.com/emilnordstroem" target="_blank">
+                <div class="grid-github-item">
+                    <a id="link-github-item" href="https://github.com/emilnordstroem" target="_blank">
+                        <span class="material-symbols-outlined">commit</span>
                         GitHub
                     </a>
                 </div>
-                
             </div>
-        </header> 
+
+        </header>
+
     </body>
 </html>
