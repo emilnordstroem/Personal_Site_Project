@@ -5,28 +5,48 @@ body {
     background-color: #f9f9f9;
 }
 
-.main-grid-container {
-    display: grid;
-    grid-template-columns: 10% auto 10%;
-    grid-template-areas:
-    ". header ." 
-    ". navigation ."
-    ". main ."
-    ". fooder .";
-    padding-top: 20px;
+/* The navigation-container has a fixed position on the page */
+.navigation-container {
+    position: fixed;
+    display: flex;
+    background-color: black;
+    gap: 2rem;
+    justify-content: center;
+    width: 650px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
-.navigation-container {
-    grid-area: navigation;
-    background-color: black;
+.main-navigation-interaction-container {
     display: flex;
-    justify-content: center;
+    background-color: black;
     gap: 2rem;
-    padding: 10px;
+    justify-content: center;
+    width: 80%;
 }
 
 .navigation-interaction-item > a {
     color: rgb(247, 247, 247);
     text-decoration-line: none;
 }
+
+.navigation-interaction-item > i {
+    color: rgb(247, 247, 247);
+    background-color: black;
+}
+
+/* The page-grid-container is the grid of the page - excl. from navigation-container */
+.page-grid-container {
+    display: grid;
+    grid-template-columns: 5% auto 5%;
+    grid-template-areas:
+    ". header ." 
+    ". main ."
+    ". footer .";
+    padding-top: 20px;
+}
+
 
