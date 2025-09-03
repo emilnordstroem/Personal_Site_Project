@@ -9,7 +9,7 @@ body {
 .navigation-container {
     position: fixed;
     display: flex;
-    background-color: black;
+    background-color: rgb(44, 44, 44);
     gap: 2rem;
     justify-content: center;
     width: 650px;
@@ -22,7 +22,7 @@ body {
 
 .main-navigation-interaction-container {
     display: flex;
-    background-color: black;
+    background-color: rgb(44, 44, 44);
     gap: 2rem;
     justify-content: center;
     width: 80%;
@@ -33,9 +33,13 @@ body {
     text-decoration-line: none;
 }
 
+.navigation-interaction-item > a:hover {
+    color: rgb(170, 170, 170);
+}
+
 .navigation-interaction-item > i {
     color: rgb(247, 247, 247);
-    background-color: black;
+    background-color: rgb(44, 44, 44);
 }
 
 /* The page-grid-container is the grid of the page - excl. from navigation-container */
@@ -48,7 +52,7 @@ body {
     ". footer .";
 }
 
-
+/* Greeting grid */
 .greeting-container{
     grid-area: greeting;
 }
@@ -62,7 +66,27 @@ body {
     box-sizing: border-box;
 }
 
+/* Main grid */
+.main-content-container {
+    grid-area: main;
+    background-color: white;
+    display: flexbox;
+}
 
+.main-content-item {
+    display: flex;
+    gap: 1rem;
+    padding: 5px;
+}
+
+.main-content-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.main-content-list > li {
+    padding: 5%;
+}
 
 .footer-container {
     grid-area: footer;

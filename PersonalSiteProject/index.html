@@ -4,9 +4,10 @@
         <meta charset="utf-8">
         <title>Website of Emil Nordstroem</title>
         <link rel="stylesheet" href="css/index.css">
-        <!-- please visit: https://fonts.google.com/icons -->
+        <!-- for icon references, visit: https://fonts.google.com/icons -->
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <body>
+        <script src="script/index.js"></script>
+    <body onload="pageSetup()">
 
         <span class="navigation-container">
             <div class="navigation-interaction-item">
@@ -49,14 +50,36 @@
 
             <header class="greeting-container">
                 <div class="main-greeting-item">
-                    <img src="images/main-greeting-technology.jpeg" alt="Finger engaging with a smartphone">
+                    <img src="images/main-greeting-technology.png" alt="Finger engaging with a smartphone">
                 </div>
             </header>
 
-            <article class="main-container">
-                <div class="main-content-item">
-                    
-                </div>
+            <article class="main-content-container">
+
+                <article>
+                    <div class="main-content-item">
+                        <h2 class="main-content-list-heading">
+                            <span class="material-symbols-outlined">code_blocks</span>
+                            Programming Languages
+                        </h2>
+                        <ul class="main-content-list" id="programming-languages-list"></ul>
+                    </div>
+                    <div class="main-content-item">
+                        <h2 class="main-content-list-heading">
+                            <span class="material-symbols-outlined">database</span>
+                            Backend Development
+                        </h2>
+                        <ul class="main-content-list" id="backend-development-tools-list"></ul>
+                    </div>
+                    <div class="main-content-item">
+                        <h2 class="main-content-list-heading">
+                            <span class="material-symbols-outlined">web</span>
+                            Web Development
+                        </h2>
+                        <ul class="main-content-list" id="web-development-tools-list"></ul>
+                    </div>
+                </article>
+        
             </article>
 
             <footer class="footer-container">
