@@ -5,18 +5,28 @@ body {
     background-color: #f9f9f9;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-areas:
+    ". header ." 
+    ". navigation ."
+    ". main ."
+    ". fooder .";
+    padding-top: 20px;
 }
 
-.header-interaction-container{
+.navigation-container {
+    grid-area: navigation;
+    background-color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
+    padding: 10px;
 }
 
-#profile_photo {
-    height: 200px;
-    border-radius: 20px;
+.navigation-interaction-item > a {
+    color: rgb(247, 247, 247);
+    text-decoration-line: none;
 }
+
