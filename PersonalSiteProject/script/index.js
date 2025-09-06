@@ -1,7 +1,7 @@
 function pageSetup(){
     addDevelopmentToolsOverview();
     addProjectsToList();
-    firstProjectTableDataFieldStyle();
+    styleProjectListTables();
 }
 
 function addDevelopmentToolsOverview () {
@@ -44,15 +44,12 @@ function addImagesToList (images, id) {
 }
 
 function addProjectsToList () {
-    const projectList = document.getElementById("projectList");
+    const projectOverviewDiv = document.getElementById("projects-overview");
 
     fetch('files/projectObjects.json')
         .then(response => response.json())
         .then(rawData => {
             const projects = rawData.projectObjects;
-
-            const wrapperDivElement = document.createElement("div");
-            wrapperDivElement.className = 'project-list-group'
 
             let groupUnorderedListElement = document.createElement("ul");
             groupUnorderedListElement.className = 'main-content-list project-list-group';
@@ -100,14 +97,24 @@ function addProjectsToList () {
 
                 // Every fourth element will be placed in a new group
                 if (index % groupSizeLimit === 0) {
-                    wrapperDivElement.appendChild(groupUnorderedListElement);
+                    projectOverviewDiv.appendChild(groupUnorderedListElement);
 
                     groupUnorderedListElement = document.createElement("ul");
                     groupUnorderedListElement.className = 'main-content-list project-list-group';
                 }
             }
+        });
+}
 
-            projectList.replaceWith(wrapperDivElement);
+function styleProjectListTables () {
+    const projectListElements = document.querySelectorAll("#projectList li");
+    console.log(projectListElements);
 
+    projectListElements.forEach(listElement => {
+        const projectTable = listElement.firstElementChild;
+        const firstTableRow = projectTable.firstElementChild;
+        const tableDataInTableRow = firstTableRow.firstElementChild;
+        tableDataInTableRow.textContent = "projectNameStyle";
     });
+
 }

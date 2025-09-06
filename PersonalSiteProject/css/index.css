@@ -6,7 +6,7 @@ body {
 }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* The navigation-container has a fixed position on the page */
@@ -90,6 +90,15 @@ scroll-behavior: smooth;
 
 .main-content-list > li {
     padding: 5%;
+}
+
+.main-content-list-heading {
+    display: flex;
+    gap: 5px;
+}
+
+.projectNameStyle {
+    font-size: 16px;
 }
 
 .main-content-list-table {
