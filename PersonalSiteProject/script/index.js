@@ -64,7 +64,12 @@ function addProjectsToList () {
                     const anchorElement = document.createElement("a");
                     anchorElement.href = projectObject[key];
                     anchorElement.target = "_blank";
-                    anchorElement.textContent = "Link to GitHub";
+
+                    const spanElement = document.createElement("span");
+                    spanElement.className = "material-symbols-outlined";
+                    spanElement.textContent = "link"
+                    
+                    anchorElement.appendChild(spanElement);
                     tableData.appendChild(anchorElement);
                 } else {
                     tableData.textContent = projectObject[key];
