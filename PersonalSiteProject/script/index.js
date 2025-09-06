@@ -1,6 +1,7 @@
 function pageSetup(){
     addDevelopmentToolsOverview();
     addProjectsToList();
+    firstProjectTableDataFieldStyle();
 }
 
 function addDevelopmentToolsOverview () {
@@ -70,6 +71,8 @@ function addProjectsToList () {
 
                 for (const key in projectObject) {
                     const tableRow = document.createElement("tr");
+                    tableRow.className = "project-table-row";
+
                     const tableData = document.createElement("td");
                     tableData.className = "project-table-data";
 
