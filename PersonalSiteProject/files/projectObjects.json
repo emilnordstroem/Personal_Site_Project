@@ -27,7 +27,7 @@
         {
             "project": "Chess",
             "context": "Spare time project",
-            "description": "A classic game of chess. Created in relation to my research into the React libery (and Vite). I wrote the program in TypeScript, focussing on practical implementation of the component-based framework through a two-dimensional array board.",
+            "description": "A classic game of chess. Created in relation to my research into the React library (and Vite). I wrote the program in TypeScript, focussing on practical implementation of the component-based framework through a two-dimensional array board.",
             "link": "https://github.com/emilnordstroem/Chess"
         },
         {

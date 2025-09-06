@@ -1,7 +1,7 @@
 function pageSetup(){
     addDevelopmentToolsOverview();
     addProjectsToList();
-    styleProjectListTables();
+    styleProjectListTableData();
 }
 
 function addDevelopmentToolsOverview () {
@@ -72,8 +72,8 @@ function addProjectsToList () {
 
                     const tableData = document.createElement("td");
                     tableData.className = "project-table-data";
-
-                    if (key === "link") {
+                    
+                    if (key === 'link') {
                         const anchorElement = document.createElement("a");
                         anchorElement.href = projectObject[key];
                         anchorElement.target = "_blank";
@@ -85,6 +85,11 @@ function addProjectsToList () {
                         anchorElement.appendChild(spanElement);
                         tableData.appendChild(anchorElement);
                     } else {
+                        if (key === 'project') {
+                            tableData.class = "projectName";
+                        } else if (key === 'context') {
+                            tableData.class = "projectContext";
+                        } 
                         tableData.textContent = projectObject[key];
                     }
 
@@ -106,8 +111,6 @@ function addProjectsToList () {
         });
 }
 
-function styleProjectListTables () {
-    const projectListGroups = document.querySelectorAll("#projects-overview > ul");
-    console.log();
-
+function styleProjectListTableData () {
+    
 }
