@@ -92,10 +92,6 @@ body {
     border-collapse: collapse;
 }
 
-.project-table-data {
-    border: solid beige;
-}
-
 /* The footer-container is the lower-most element - showing links */
 .footer-container {
     grid-area: footer;
