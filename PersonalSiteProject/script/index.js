@@ -1,4 +1,9 @@
 function pageSetup(){
+    addDevelopmentToolsOverview();
+    addProjectsToList();
+}
+
+function addDevelopmentToolsOverview () {
     const programmingLanguageImages = [
         "JAVA_Icon.png",
         "JavaScript_Icon.png",
@@ -21,7 +26,7 @@ function pageSetup(){
     addImagesToList(webDevelopmentTools, 'web-development-tools-list');
 }
 
-function addImagesToList(images, id){
+function addImagesToList (images, id) {
     const list = document.getElementById(id);
 
     for (const filename of images) {
@@ -35,12 +40,42 @@ function addImagesToList(images, id){
         li.appendChild(img);
         list.appendChild(li);
     }
-
-    const span = document.createElement('span');
-    span.id = "inProgress";
-    span.className = "material-symbols-outlined";
-    span.textContent = "more_horiz"
-    list.appendChild(span);
 }
 
+function addProjectsToList () {
+    const projectList = document.getElementById("projectList");
 
+    fetch('files/projectObjects.json')
+        .then(response => response.json())
+        .then(rawData => {
+            const projects = rawData.projectObjects;
+
+            for (const projectObject of projects) {
+                console.log(projects);
+                const projectListElement = document.createElement("li");
+                const projectTable = document.createElement("table");
+                projectTable.className = 'main-content-list-table';
+
+                for (const key in projectObject) {
+                const tableRow = document.createElement("tr");
+                const tableData = document.createElement("td");
+
+                if (key === "link") {
+                    const anchorElement = document.createElement("a");
+                    anchorElement.href = projectObject[key];
+                    anchorElement.target = "_blank";
+                    anchorElement.textContent = "Link to GitHub";
+                    tableData.appendChild(anchorElement);
+                } else {
+                    tableData.textContent = projectObject[key];
+                }
+
+                tableRow.appendChild(tableData);
+                projectTable.appendChild(tableRow);
+                }
+
+                projectListElement.appendChild(projectTable);
+                projectList.appendChild(projectListElement);
+            }
+    });
+}

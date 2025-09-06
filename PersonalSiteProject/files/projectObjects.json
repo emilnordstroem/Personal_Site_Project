@@ -1,0 +1,40 @@
+{
+    "projectObjects": [
+        {
+            "project": "Konference Management System",
+            "context": "Semester project",
+            "description": "The focus of this project was developing object relations, handling dependencies and associations in Java. The project was a collaboral effort, engaging with GitHub in a collabral manner",
+            "link": "https://github.com/emilnordstroem/KonferenceAdministrationSystem"
+        },
+        {
+            "project": "Order Management System", 
+            "context": "Spare time project",
+            "description": "Inspired by SAP, this project focused on the practise of order management. Since this was my first independed project, written in Java, my focus was mainly dynamic class states, search algorithms on different parameters, and GUI (JavaFX).", 
+            "link": "https://github.com/emilnordstroem/OrderManagementSystem"
+        },
+        {
+            "project": "Tiny Book Store",
+            "context": "Spare time project",
+            "description": "Inspired by Amazon.com, this project focus on consumer side applications, through an architectural perspective. Developed in Java, using JavaFX, the programs architectural implementation was the focus, using interfaces and supertypes",
+            "link": "https://github.com/emilnordstroem/TinyBookStore"
+        },
+        {
+            "project": "Sall Whiskey",
+            "context": "Semester Exam Project",
+            "description": "This project was a collaboral effort, developed in Java using JavaFX for GUI. This project focuses on real-life business applications. The projects focus was applying generic architecture, datastructures, and digitalization of manual processes.",
+            "link": "https://github.com/MikkelCardon/SallWhisky"
+        },
+        {
+            "project": "Chess",
+            "context": "Spare time project",
+            "description": "A classic game of chess. Created in relation to my research into the React libery (and Vite). I wrote the program in TypeScript, focussing on practical implementation of the component-based framework through a two-dimensional array board.",
+            "link": "https://github.com/emilnordstroem/Chess"
+        },
+        {
+            "project": "Personal website",
+            "context": "Spare time project",
+            "description": "This project, of which you are at right now, is a project focussing on the basic technologies of JavaScript, HTML, and CSS.",
+            "link": "https://github.com/emilnordstroem/Personal_Site_Project"
+        }
+    ]
+}
