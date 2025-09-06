@@ -5,6 +5,10 @@ body {
     background-color: #f9f9f9;
 }
 
+html {
+scroll-behavior: smooth;
+}
+
 /* The navigation-container has a fixed position on the page */
 .navigation-container {
     position: fixed;
