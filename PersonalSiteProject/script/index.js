@@ -55,7 +55,7 @@ function addProjectsToList () {
             groupUnorderedListElement.className = 'main-content-list project-list-group';
             
             let index = 0;
-            let groupSizeLimit = 3;
+            let groupSizeLimit = 2;
 
             for (const projectObject of projects) {
                 index++;
@@ -107,14 +107,7 @@ function addProjectsToList () {
 }
 
 function styleProjectListTables () {
-    const projectListElements = document.querySelectorAll("#projectList li");
-    console.log(projectListElements);
-
-    projectListElements.forEach(listElement => {
-        const projectTable = listElement.firstElementChild;
-        const firstTableRow = projectTable.firstElementChild;
-        const tableDataInTableRow = firstTableRow.firstElementChild;
-        tableDataInTableRow.textContent = "projectNameStyle";
-    });
+    const projectListGroups = document.querySelectorAll("#projects-overview > ul");
+    console.log();
 
 }
