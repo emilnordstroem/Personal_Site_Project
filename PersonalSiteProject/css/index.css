@@ -97,6 +97,10 @@ html {
     gap: 5px;
 }
 
+.image-list {
+    height: 100px;
+}
+
 /* Tables */
 .main-content-list-table {
     border-collapse: collapse;
@@ -113,8 +117,18 @@ html {
 }
 
 /* Background images and styling for section headings */
-/* Currently not in use */
-/*
+#programming-languages-heading,
+#backend-development-heading,
+#web-development-heading,
+#projects-heading {
+    border: 2px solid black;
+    width: 350px;
+    height: 200px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #programming-languages-heading {
     background-image: url("../images/programming-languages-heading-background.png");
 }
@@ -130,7 +144,6 @@ html {
 #projects-heading {
     background-image: url("../images/projects-heading-background.png");
 }
-*/
 
 /* The footer-container is the lower-most element - showing links */
 .footer-container {
