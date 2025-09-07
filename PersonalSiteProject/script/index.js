@@ -1,7 +1,6 @@
 function pageSetup(){
     addDevelopmentToolsOverview();
     addProjectsToList();
-    styleProjectListTableData();
 }
 
 function addDevelopmentToolsOverview () {
@@ -87,8 +86,10 @@ function addProjectsToList () {
                     } else {
                         if (key === 'project') {
                             tableData.class = "projectName";
+                            tableData.classList = "table-row-project-data";
                         } else if (key === 'context') {
                             tableData.class = "projectContext";
+                            tableData.classList = "table-row-context-data";
                         } 
                         tableData.textContent = projectObject[key];
                     }
@@ -109,8 +110,4 @@ function addProjectsToList () {
                 }
             }
         });
-}
-
-function styleProjectListTableData () {
-    
 }
