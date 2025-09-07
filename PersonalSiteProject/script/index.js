@@ -35,7 +35,7 @@ function addImagesToList (images, id) {
 
         img.src = `images/${filename}`;
         img.alt = filename.split('.')[0];
-        img.style.height = "100px";
+        img.className = "image-list";
 
         li.appendChild(img);
         list.appendChild(li);
@@ -43,7 +43,7 @@ function addImagesToList (images, id) {
 }
 
 function addProjectsToList () {
-    const projectOverviewDiv = document.getElementById("projects-overview");
+    const projectOverviewSpan = document.getElementById("projects-overview");
 
     fetch('files/projectObjects.json')
         .then(response => response.json())
@@ -103,7 +103,7 @@ function addProjectsToList () {
 
                 // Every fourth element will be placed in a new group
                 if (index % groupSizeLimit === 0) {
-                    projectOverviewDiv.appendChild(groupUnorderedListElement);
+                    projectOverviewSpan.appendChild(groupUnorderedListElement);
 
                     groupUnorderedListElement = document.createElement("ul");
                     groupUnorderedListElement.className = 'main-content-list project-list-group';
