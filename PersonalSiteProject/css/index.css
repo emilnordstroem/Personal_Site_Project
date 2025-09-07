@@ -122,8 +122,8 @@ html {
 #web-development-heading,
 #projects-heading {
     border: 10px solid rgb(196, 220, 236);
-    width: auto;
-    height: 150px;
+    width: autopx;
+    height: 125px;
 
     background-repeat: no-repeat;
     background-position: top;
